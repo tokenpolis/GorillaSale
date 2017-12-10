@@ -9,10 +9,10 @@ import "zeppelin-solidity/contracts/token/CappedToken.sol";
  */
 contract OranguToken is CappedToken {
 
-  string  public constant name            = "OranguToken";
-  string  public constant symbol          = "OR1";
-  uint8   public constant decimals        = 15;
-  uint256 public constant max_supply      = 10000 * 10**15;
+  string  public constant name            = "Crip.token(test)";
+  string  public constant symbol          = "CRI";
+  uint8   public constant decimals        = 18;
+  uint256 public constant max_supply      = 50000000 * 10**18;//50ml and 18 decimals
 
   function OranguToken() CappedToken(max_supply) public  {} 
 

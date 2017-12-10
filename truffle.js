@@ -15,9 +15,9 @@ module.exports = {
     },   
 
     mainnet: {
-    host: "127.0.0.1", // Random IP for example purposes (do not use)
+    host: "127.0.0.1", 
     port: 8545,
-    network_id: 1,        // Ethereum test network
+    network_id: 1, // Ethereum network
     // optional config values:
     gas: 4700000,
     gasPrice: 1000000000,
@@ -26,7 +26,7 @@ module.exports = {
     //          - if specified, host and port are ignored.
    },
    ropsten: {
-    host: "127.0.0.1", // Random IP for example purposes (do not use)
+    host: "127.0.0.1", 
     port: 8545,
     network_id: 3,        // Ethereum test network
     // optional config values:

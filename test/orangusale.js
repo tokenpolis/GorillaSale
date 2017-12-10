@@ -59,8 +59,8 @@ const day        = 86400 * second;
 const week       = day * 7;
 const wei        = 1; //1 wei = 1 wei
 const ether      = 1e18 * wei;
-const gorilloshi = 1;
-const gorilla    = 1e15 * gorilloshi; 
+const chimp      = 1; //smallest monkey
+const gorilla    = 1e18 * chimp; //larger monkey 
 
 
 const should = require('chai')
@@ -88,7 +88,7 @@ contract('OranguSale', function ([owner, wallet, investor]) {
     this.preminedOwner=owner;
     this.premined = 13 * gorilla;
 
-console.log("*******");
+
     this.crowdsale = await OranguSale.new(this.startTime, 
                                           this.endTime, 
                                           this.rate, 
@@ -226,6 +226,22 @@ console.log("*******");
     (await this.token.balanceOf(investor)).should.be.bignumber.equal(0);
     await this.token.mint(investor,1).should.be.fulfilled;
     (await this.token.balanceOf(investor)).should.be.bignumber.equal(1);
+
+  });
+
+
+  it('shouldn\'t mint more than max_supply tokens in total', async function () {
+    await increaseTimeTo(this.startTime);
+    const totalSupply = await this.token.totalSupply();
+    const max_supply = await this.token.max_supply();
+    console.log("totalSupply:"+(totalSupply / gorilla)+" gorilla(s)");
+    console.log("maxSupply:"+(max_supply / gorilla)+" gorilla(s)");
+
+    //take Token ownership to invoke mint(...)
+    await this.crowdsale.takeTokenContractOwnership({from: owner});
+    await this.token.mint(owner,max_supply - totalSupply).should.be.fulfilled;
+    (await this.token.balanceOf(owner)).should.be.bignumber.equal(max_supply);
+    await this.token.mint(owner,1).should.be.rejected;
 
   });
 
