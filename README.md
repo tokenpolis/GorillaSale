@@ -46,7 +46,7 @@ testrpc
 Now go to the root folder of project and type in ANOTHER terminal
 
 ```
-truffle test
+truffle test --network=test
 ```
 
 You should see all tests passed. CLOSE testrpc and go to next steps for deployment on Ropsten
