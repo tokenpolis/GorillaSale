@@ -1,9 +1,5 @@
 # GorillaSale
-Simple eth tokensales based on Open Zeppelin
-
-
-- GorillaSale
-- OranguSale
+Tokensale based on Open Zeppelin
 
 
 # Pre-requisites
@@ -22,14 +18,14 @@ I launched Ubuntu 14.04 VM on Parallels/MacOsX. In my MAC I have also Chrome wit
 Tested also on Ubuntu 16.04
 
 
-# Install openzeppelin
+# Install everything
 
 Get into the root folder of your project and launch
 
 ```
-npm install zeppelin-solidity
+npm install
 ```
-beware tested with Open Zeppelin 1.3.0
+beware tested with Open Zeppelin 1.4.0
 
 
 
@@ -113,9 +109,9 @@ Saving successful migration to network...
   ... 0x07eef1de7571937b9580a0b54c5a3029970087d34eef240fe1bf2999d2172212
 Saving artifacts...
 Running migration: 2_deploy_contracts.js
-  Deploying GorillaToken...
+  Deploying OranguToken...
   ... 0x6db5932d721192aa227bed58cc217061ccb9243d92bf71e3662b50c06660ef4c
-  GorillaToken: 0x88ebe70bc4823fccf101d0c914749cd1d4d194b3
+  OranguToken: 0x88ebe70bc4823fccf101d0c914749cd1d4d194b3
 
 ```
 Otherwise you're in trouble, and *troubles are hard to shoot in Ethereum-land.*
