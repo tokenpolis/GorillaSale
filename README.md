@@ -6,7 +6,6 @@ Tokensale based on Open Zeppelin
 This has been tested on Ubuntu 14.04, but I'm confident can work on other OS as well.
 ```
 Truffle v3.4.11 (core: 3.4.11) with Solidity v0.4.15 (solc-js)
-Open zeppelin 1.4.0
 Geth 1.7.2-stable-1db4ecdc
 EthereumJS TestRPC v6.0.3 (ganache-core: 2.0.2)
 Ethereum Wallet V 0.9.2 (optional, to mess around with transactions and UI)
@@ -25,7 +24,7 @@ Get into the root folder of your project and launch
 ```
 npm install
 ```
-beware tested with Open Zeppelin 1.4.0
+beware this should install Open Zeppelin 1.4.0 and many other stuff
 
 
 
